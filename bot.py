@@ -10,8 +10,8 @@ bot = Client(USERBOT_STRING_SESSION, API_ID, API_HASH)
 
 
 @bot.on_message(filters.incoming & filters.channel & ~filters.chat(CHANNEL))
-async def forward(bot, message):
-    await message.forward(CHANNEL)
+async def copy(bot, message):
+    await message.copy(CHANNEL)
 
 
 bot.run()
